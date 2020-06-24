@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ajedrez - El Melo. Posada Roscon</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="shortcut icon" href="./Recursos/icon.png" type="image/png">
+    </head>
+
+    <style type="text/css">
+        .myDiv {
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        #inner{
+          width: 45%;
+          height: 70%;
+          top: 20%;
+          left: 32%;
+          right: 25%;
+          bottom: 25%;
+          position: absolute;
+          background:#8B4513;
+          display: none;
+        }
+        #inner2{
+          width: 50%;
+          height: 36%;
+          top: 5%;
+          left: 26%;
+          right: 10%;
+          position: absolute;
+          background:grey;
+          display: none;
+        }
+        #inner3{
+          width: 50%;
+          height: 36%;
+          top: 5%;
+          left: 26%;
+          right: 10%;
+          position: absolute;
+          background:grey;
+          display: none;
+        }
+        #inner4{
+          width: 50%;
+          height: 36%;
+          top: 5%;
+          left: 26%;
+          right: 10%;
+          position: absolute;
+          background:grey;
+          display: none;
+        }
+        #inner5{
+          width: 25%;
+          height: 40%;
+          top: 20%;
+          left: 38%;
+          right: 25%;
+          bottom: 25%;
+          position: absolute;
+          background:#8B4513;
+          display: block;
+          text-align: center;
+          border-style: solid;
+          border-color: white;
+          border-width: 10px;
+        }
+        #inner6{
+          width: 20%;
+          height: 20%;
+          top: 71%;
+          left: 2%;
+          position: absolute;
+          display: none;
+        }
+        #inner7{
+          width: 20%;
+          height: 20%;
+          top: 71%;
+          left: 76%;
+          position: absolute;
+          display: none;
+        }
+        #buttons{
+          width: 30%;
+          height: 90%;
+          top: 5%;
+          left: 8%;
+          position: relative;
+          background:#8B4513;
+          border-style: solid;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        #button{
+          width: 70%;
+          height: 10%;
+          left: 15%;
+          position: relative;
+          background: #ffffff;;
+        }
+      
+        #images{
+          width: 54%;
+          height: 90%;
+          top: 5%;
+          left: 43%;
+          position: absolute;
+          border-style: solid;
+          background:#8B4513;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        #image{
+          width: 60%;
+          height: 20%;
+          left: 20%;
+          right: 20%;
+          position: relative;
+          
+        }
+        #image2{
+          width: 98%;
+          height: 95%;
+          left: 1%;
+          top: 2.5%;
+          position: relative;
+        }
+        #Reload{
+          top: 42%;
+          left: 26%;
+          right: 10%;
+          position: absolute;
+          display: none;
+        }
+      </style>
+
+
+    <body>
+        <div class="myDiv">
+            <script type="module" src ="./Chess.js"></script>
+            <div id=inner5>
+              <p></p>
+              <h1 style="color:white">Empieza la partida</h1>
+              <h2 style="color:white">Andres Posada Saldarriaga</h2>
+              <h2 style="color:white">Jhon Jairo Bonilla</h2>
+              <h2 style="color:white">Jeisson Harvey Barrera</h2>
+              <audio controls autoplay="autoplay" id="audio"> <source src="../Recursos/Sounds/Intro.mp3"/>   </audio> 
+            </div>
+            <div id=inner>  
+                <div id=buttons>
+                    <button type="button" onclick="myFunction('Reina')" class="btn btn-danger" >
+                      <strong>Reina</strong>
+                    </button>
+                    <button type="button" onclick="myFunction('Caballo')" class="btn btn-danger">
+                      <strong>Caballero</strong>
+                    </button>
+                    <button type="button" onclick="myFunction('Alfil')" class="btn btn-danger">
+                      <strong>Alfil</strong>
+                    </button>
+                    <button type="button" onclick="myFunction('Torre')" class="btn btn-danger">
+                      <strong>Torre</strong>
+                    </button>
+                </div>
+                <div id=images>
+                    <img src="../Recursos/minionQueen-removebg-preview.png" id=image>
+                    <img src="../Recursos/minionKnight-removebg-preview.png" id=image>
+                    <img src="../Recursos/minionBishop-removebg-preview.png" id=image>
+                    <img src="../Recursos/minionRook.png" id=image>
+                </div>
+            </div>
+
+            <div id=inner2>
+                <img src="../Recursos/Win_Amarillas2.jpg" id=image2>
+            </div>
+            <div id=inner3>
+              <img src="../Recursos/Win_Moradas2.jpg" id=image2>
+            </div>
+            <div id=inner4>
+              <img src="../Recursos/minionPeace.jpg" id=image2>
+            </div>
+
+
+
+            <div id=Reload>
+              <button type="buttonR" class="btn btn-dark" onclick="location.reload()">
+                <strong>Revancha, o miedo?</strong>
+              </button>
+            </div>
+
+            <div id=inner6>
+              <video type="video/mp4"  height="100%" width="100%" autoplay muted>
+                <source src="../Recursos/Sounds/Negros_del_Ataud.mp4">
+              </video>
+            </div>
+            <div id=inner7>
+              <video type="video/mp4"  height="100%" width="100%" autoplay muted>
+                <source src="../Recursos/Sounds/Negros_del_Ataud.mp4">
+              </video>
+            </div>
+         </div>
+    </body>
+</html>
